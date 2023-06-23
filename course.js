@@ -329,7 +329,104 @@
 
     // #endregion : default
 
+    // #region : primary key (unique and non NULL and only one per table)
+
+        // #region : create table with primary key
+        
+            // create table transanctions(
+            //     transanction_id INT PRIMARY KEY;
+            // )
+        
+        // #endregion : create table with primary key
+    
+        // #region : update primary key of a pre existing table
+        
+            // alter table transanctions
+            // add constraint PRIMARY KEY(transanction_id);
+        
+        // #endregion : update primary key of a pre existing table
+
+    // #endregion : primary key
+
+    // #region : foreignKey
+
+        // #region : creating foreight key
+        
+            // create table customers(
+            //     customerId INT PRIMARY KEY AUTO_INCREMENT,
+            //     fName VARCHAR(20),
+            //     lName VARCHAR(30)
+            // )
+
+            // create table transactions(
+            //     trans_id INT PRIMARY KEY AUTO_INCREMENT,
+            //     customer_id INT,
+            //     FOREIGHN KEY(customer_id) REFERENCES customers(customer_id)
+            // )
+        
+        // #endregion : creating foreight key
+        
+        // #region : dropping foreign Key
+                
+                    // alter table transactions
+                    // DROP FOREIGHN KEY transactions_ibfk_1
+                
+                // #endregion : dropping foreign Key
+            
+        // #region : name foreign key
+        
+            // alter table transanctions
+            // ADD CONSTRAINS fk_customer_id
+            // FOREIGHT KEY(customer_id) REFERENCES customers(customer_id)
+        
+        // #endregion : name foreign key
+    
+    // #endregion : foreignKey
+
 // #endregion : constrains
+
+// #region : auto-increment attribute
+
+    // #region : create table with auto-increment
+    
+        // create table transanctions(
+        //     trans_id INT PRIMARY KEY AUTO_INCREMENT,
+        // )
+    
+    // #endregion : create table with auto-increment
+
+    // #region : altering auto inc
+    
+        // alter table transanctions
+        // AUTO_INCREMENT = 1000;
+    
+    // #endregion : altering auto inc
+
+// #endregion : auto-increment attribute
+
+// #region : joins
+
+    // select * 
+    // FROM transactions INNER/LEFT/RIGHT JOIN customers
+    // ON transactions.customer_id = customers.customer_id;
+    
+    // #region : select only specific columns
+    
+        // select transaction_id, amount, fName, lName
+        // FROM transactions INNER JOIN customers
+        // ON transactions.customer_id = customers.customer_id;
+    
+    // #endregion : select only specific columns
+
+// #endregion : joins
+
+
+
+
+
+
+
+
 
 
 
